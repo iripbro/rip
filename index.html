@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh;
+            transform: scale(1.75);
+            transform-origin: center; 
+        }
+
+        h1, h2 {
+            margin: 10px 0;
+        }
+
+        p {
+            margin: 5px 0; 
+        }
+
+        .button-container {
+            display: flex; 
+            justify-content: center; 
+            margin: 10px 0; 
+        }
+
+        button {
+            background-color: #1E90FF; 
+            color: #fff; 
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 5px;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        button:hover {
+            background-color: #4682B4;
+        }
+
+        button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        img {
+            display: block;
+            margin: 20px auto
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать на мой сайт!</h1>
+    <p>Это мой первый сайт, который я создал с помощью HTML.</p>
+
+    <h2>Выберите опцию:</h2>
+    <div class="button-container">
+    <button onclick="window.location.href='https://www.youtube.com/'">Ютубчик</button>
+    <button onclick="window.location.href='https://trychatgpt.ru/'">Чат Gpt</button>
+    <button onclick="window.location.href='https://hd.kinopoisk.ru/'">Кинопоиск</button>
+    </div>
+
+    <h2>Изображение</h2>
+    <img src="https://lh3.googleusercontent.com/proxy/FnVeWYvty4Uczl5rT4n8EZF43fehNGxr0YM9CcqpKF3vTGxO24282yQ24teMg8n8N_IFESwksc-oJ41zE5MQujnbwPiaTLnMKjDXLMaoL2mZviTqmDt3pOhEwbFZZyeiZar1wiuEmLu0GRLiEkC4tsm8dhw04b4G6p8BnDwnkb5m4p39SFRFMHAOdT6u" alt="Описание изображения" width="300">
+
+    <h2>Специальный текст</h2>
+    <p><strong>Это важная информация!</strong></p>
+    <p><em>Это курсивный текст.</em></p>
+</body>
+</html>
