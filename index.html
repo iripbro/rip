@@ -1,103 +1,101 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мой сайт</title>
-  <style>
-    body {
-      background-color: #333; /* Темный фон */
-      color: #fff; /* Белый текст */
-      text-align: center; /* Центрирование текста */
-      font-family: Arial, sans-serif; /* Шрифт */
-      margin: 0; /* Убираем отступы по краям */
-      padding: 20px; /* Отступы внутри тела */
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Центрируем содержимое по горизонтали */
-      justify-content: center; /* Центрируем по вертикали */
-      height: 100vh; /* Занимаем всю высоту окна */
-      transform: scale(1.0); /* Масштабируем на 100% для мобильных устройств */
-    }
-
-    h1, h2 {
-      margin: 10px 0; /* Отступы для заголовков */
-    }
-
-    p {
-      margin: 5px 0; /* Отступы для параграфов */
-    }
-
-    .button-container {
-      display: flex; /* Используем Flexbox для кнопок */
-      justify-content: center; /* Центрируем кнопки по горизонтали */
-      margin: 10px 0; /* Отступы для контейнера кнопок */
-      flex-wrap: wrap; /* Оборачиваем кнопки на узких экранах */
-    }
-
-    button {
-      background-color: #1E90FF; /* Цвет фона кнопки */
-      color: #fff; /* Цвет текста на кнопке */
-      border: none; /* Убираем рамку */
-      padding: 10px 20px; /* Отступы внутри кнопки */
-      font-size: 16px; /* Размер шрифта */
-      cursor: pointer; /* Стрелка курсора при наведении */
-      border-radius: 5px; /* Скругление углов */
-      margin: 5px; /* Отступы для кнопок */
-      transition: transform 0.1s ease, box-shadow 0.1s ease; /* Анимация при нажатии */
-    }
-
-    button:hover {
-      background-color: #4682B4; /* Цвет фона кнопки при наведении */
-    }
-
-    button:active {
-      transform: scale(0.95); /* Уменьшение размера кнопки при нажатии */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Уменьшение тени при нажатии */
-    }
-
-    img {
-      display: block; /* Делаем изображение блочным элементом */
-      margin: 20px auto; /* Центрируем изображение и добавляем отступы */
-      max-width: 100%; /* Ограничиваем ширину изображения */
-      height: auto; /* Сохраняем пропорции */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тень для изображения */
-    }
-
-    /* Медиа-запросы для адаптивного дизайна */
-    @media (min-width: 600px) {
-      body {
-        transform: scale(1.25); /* Увеличиваем масштаб для больших экранов */
-      }
-    }
-
-    @media (min-width: 900px) {
-      body {
-        transform: scale(1.5); /* Увеличиваем масштаб для очень больших экранов */
-      }
-
-      button {
-        font-size: 18px; /* Увеличиваем размер шрифта кнопки для больших экранов */
-        padding: 12px 24px; /* Увеличиваем отступы на больших экранах */
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Добро пожаловать на мой сайт!</h1>
-  <p>Это мой первый сайт, который я создал с помощью HTML.</p>
+    <div class="container">
+        <h1>Интернет-магазин</h1>
+        <div class="cart-icon" id="cart-icon">
+            <span>🛒</span>
+            <div class="cart-count" id="cart-count">0</div>
+        </div>
+        
+        <div class="cart" id="cart">
+            <h2>Корзина</h2>
+            <ul id="cart-list"></ul>
+        </div>
 
-  <h2>Выберите опцию:</h2>
-  <div class="button-container">
-    <button onclick="window.location.href='https://www.youtube.com/'">Ютубчик</button>
-     <button onclick="window.location.href='https://hd.kinopoisk.ru/'">Кинопоиск</button>
-  </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSergYyKtwZo-1wTXTYEIu6f6AbD-Pcfy98A&s" alt="Еблан" class="product-image">
+            <h2>Еблан</h2>
+            <p>Цена: <span class="product-price">1000₽</span></p>
+            <button class="buy-button" data-product="Еблан" data-price="1000">Добавить в корзину</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPRbAPPW_QVO9CeKIh9NAOe-s6NEpkJZIPlQ&s" alt="Песпатрон" class="product-image">
+            <h2>Песпатрон</h2>
+            <p>Цена: <span class="product-price">1500₽</span></p>
+            <button class="buy-button" data-product="Песпатрон" data-price="1500">Добавить в корзину</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7YEvCAAioqvnAqYiHCTk6BjbPhIyowDLCKQ&s" alt="Сигма" class="product-image">
+            <h2>Сигма</h2>
+            <p>Цена: <span class="product-price">2000₽</span></p>
+            <button class="buy-button" data-product="Сигма" data-price="2000">Добавить в корзину</button>
+        </div>
+    </div>
 
-  <h2>Изображение</h2>
-  <img src="https://lh3.googleusercontent.com/proxy/FnVeWYvty4Uczl5rT4n8EZF43fehNGxr0YM9CcqpKF3vTGxO24282yQ24teMg8n8N_IFESwksc-oJ41zE5MQujnbwPiaTLnMKjDXLMaoL2mZviTqmDt3pOhEwbFZZyeiZar1wiuEmLu0GRLiEkC4tsm8dhw04b4G6p8BnDwnkb5m4p39SFRFMHAOdT6u" alt="Описание изображения" width="300">
+    <script>
+        const cart = {};
+        const cartIcon = document.getElementById('cart-icon');
+        const cartCount = document.getElementById('cart-count');
+        const cartList = document.getElementById('cart-list');
+        const cartDisplay = document.getElementById('cart');
 
-  <h2>Специальный текст</h2>
-  <p><strong>Это важная информация!</strong></p>
-  <p><em>Это курсивный текст.</em></p>
+        cartIcon.addEventListener('click', function() {
+            cartDisplay.classList.toggle('visible');
+        });
+
+        document.querySelectorAll('.buy-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.getAttribute('data-product');
+                const productPrice = this.getAttribute('data-price');
+
+                // Увеличиваем количество товара в корзине
+                if (!cart[productName]) {
+                    cart[productName] = { quantity: 1, price: productPrice };
+                } else {
+                    cart[productName].quantity++;
+                }
+                updateCart();
+            });
+        });
+
+        function updateCart() {
+            let totalItems = 0; // Переменная для общего количества товаров
+            cartList.innerHTML = '';
+
+            for (const [item, { quantity, price }] of Object.entries(cart)) {
+                const li = document.createElement('li');
+                li.textContent = `${item} (x${quantity}) - Цена: ${price}₽`;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Убрать';
+                removeButton.className = 'remove-button';
+                removeButton.addEventListener('click', function() {
+                    removeFromCart(item);
+                });
+
+                li.appendChild(removeButton);
+                cartList.appendChild(li);
+                totalItems += quantity; // Увеличиваем общее количество товаров
+            }
+
+            cartCount.textContent = totalItems; // Обновляем общее количество товаров в корзине
+        }
+
+        function removeFromCart(item) {
+            if (cart[item].quantity > 1) {
+                cart[item].quantity--; // Уменьшаем количество товара
+            } else {
+                delete cart[item]; // Убираем товар, если количество 0
+            }
+            updateCart();
+        }
+    </script>
 </body>
 </html>
